@@ -73,4 +73,6 @@ gulp.task('watch', function() {
     gulp.watch([config.allTypeScript], ['ts-lint', 'compile-ts', 'gen-ts-refs']);
 });
 
-gulp.task('default', ['ts-lint', 'compile-ts', 'gen-ts-refs', 'watch']);
+gulp.task('build', ['ts-lint', 'compile-ts', 'gen-ts-refs']);
+
+gulp.task('default', ['build', 'watch']);
